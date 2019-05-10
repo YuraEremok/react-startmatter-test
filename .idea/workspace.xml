@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="82c7f836-5353-48c4-b3e0-e306b656108d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Components/ToolBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/ToolBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UserRow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UserRow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/UserTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/UserTable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Containers/SearchApp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/SearchApp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/Actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/Actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/constants/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/constants/ActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/rootReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/rootReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/main.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,14 +17,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SearchApp.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Containers/SearchApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="746">
-              <caret line="76" column="67" lean-forward="true" selection-start-line="76" selection-end-line="77" />
+            <state relative-caret-position="287">
+              <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sass/main.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -164,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/store/configureStore.js" />
         <option value="$PROJECT_DIR$/src/Components/UserDetail.js" />
         <option value="$PROJECT_DIR$/src/reducers/saga.js" />
-        <option value="$PROJECT_DIR$/src/sass/main.scss" />
         <option value="$PROJECT_DIR$/db.json" />
         <option value="$PROJECT_DIR$/src/Components/SearchBar.js" />
         <option value="$PROJECT_DIR$/src/Containers/UserDetail.js" />
@@ -175,6 +178,7 @@
         <option value="$PROJECT_DIR$/src/constants/ActionTypes.js" />
         <option value="$PROJECT_DIR$/src/reducers/rootReducer.js" />
         <option value="$PROJECT_DIR$/src/Containers/SearchApp.js" />
+        <option value="$PROJECT_DIR$/src/sass/main.scss" />
       </list>
     </option>
   </component>
@@ -316,18 +320,18 @@
       <workItem from="1553198403413" duration="599000" />
       <workItem from="1556994028863" duration="27716000" />
       <workItem from="1557132060878" duration="395000" />
-      <workItem from="1557132574539" duration="92131000" />
+      <workItem from="1557132574539" duration="92631000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133388000" />
+    <option name="totallyTimeSpent" value="133888000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4953656" visible="true" weight="0.115911484" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4953656" visible="true" weight="0.115911484" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -554,13 +558,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sass/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/saga.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="984">
@@ -652,11 +649,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Containers/SearchApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="746">
-          <caret line="76" column="67" lean-forward="true" selection-start-line="76" selection-end-line="77" />
+        <state relative-caret-position="287">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sass/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
         </state>
       </provider>
     </entry>
