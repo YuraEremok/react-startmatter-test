@@ -13,10 +13,8 @@ const {searchText, changeActive, addFilter, fetchUsers, resetData} = actions;
 
 class SearchApp extends Component {
 
-
-    componentWillMount() {
-        this.props.getUsers()
-
+    componentDidMount() {
+        this.props.getUsers();
     }
 
 

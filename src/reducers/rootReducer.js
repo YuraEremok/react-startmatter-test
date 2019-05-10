@@ -24,7 +24,7 @@ export default function searchlist(state = INITIAL_STATE, action) {
                 ...state,
                 sortType: action.filter.type,
                 isDesc: !state.isDesc,
-                // activeUserId:state.sortedData[0]
+                activeUserId: null
             }
 
         case types.SEARCH_TEXT:
@@ -47,7 +47,7 @@ export default function searchlist(state = INITIAL_STATE, action) {
             return {
                 ...state,
                 data: action.data,
-                activeUserId: action.data[0].id,
+                activeUserId: null,
                 isFetching: false
             }
 
@@ -81,8 +81,7 @@ export default function searchlist(state = INITIAL_STATE, action) {
                 ...state,
                 filterValue: "",
                 sortType: '',
-                activeUserId: 0
-
+                activeUserId: null
             }
         }
 
@@ -93,6 +92,8 @@ export default function searchlist(state = INITIAL_STATE, action) {
 }
 
 export const getActiveUser = (state) => {
+    if (state.activeUserId == null) return getFilteredSortedUsers(state)[0];
+
     let activeUsers = state.data.filter(u => u.id == state.activeUserId);
     if (activeUsers.length) return activeUsers[0];
     return null;
