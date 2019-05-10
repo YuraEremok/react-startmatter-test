@@ -1,3 +1,7 @@
+![Screenshot](screenshot.JPG)
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Clone repository
 ### 'git clone https://github.com/YuraEremok/react-startmatter-test.git'
@@ -15,4 +19,4 @@ This app uses React,redux,redux-saga,react-bootstrap,json-server
 
 
 
-![Screenshot](screenshot.JPG)
+
