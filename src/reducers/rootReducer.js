@@ -10,7 +10,7 @@ export const INITIAL_STATE = {
     editMode: false,
     activeUserId: null,
     isDesc: false,
-    sortdData:[]
+    sortedData:[]
 };
 
 
@@ -19,6 +19,7 @@ export default function searchlist(state = INITIAL_STATE, action) {
     switch (action.type) {
 
         case types.ADD_FILTER:
+
             return {
                 ...state,
                 sortType: action.filter.type,
@@ -85,6 +86,15 @@ export default function searchlist(state = INITIAL_STATE, action) {
             }
         }
 
+        case types.SORTED_DATA:{
+            debugger
+            return{
+                ...state,
+                sortedData:action.data
+            }
+
+        }
+
         default:
             return state;
     }
@@ -96,7 +106,10 @@ export const getActiveUser = (state) => {
     return null;
 }
 
+
+
 export const getFilteredSortedUsers = (state) => {
+
     const filterType = state.sortType;
     const filter = x => x.name.toLowerCase().includes(state.filterValue);
     const filteredData = state.data.filter(filter);
@@ -111,7 +124,6 @@ export const getFilteredSortedUsers = (state) => {
         return 0;
     };
     let sortedData = filteredData.sort(filterFunc)
-
 
 
 

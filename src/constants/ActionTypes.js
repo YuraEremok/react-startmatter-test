@@ -7,3 +7,4 @@ export const FETCH_USERS_SAGA = 'FETCH_USERS_SAGA';
 export const UPDATE_USER = 'UPDATE_USER';
 export const EDIT_MODE = 'EDIT_MODE';
 export const EDIT_USER = 'EDIT_USER';
+export const SORTED_DATA = 'SORTED_DATA';

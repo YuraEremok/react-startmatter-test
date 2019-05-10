@@ -11,7 +11,6 @@ export default class UserRow extends Component {
     render() {
 
         const userData = this.props.user;
-
         return (
             <tr onClick={this.handleClick.bind(this)}>
                 <td            className="d-none d-sm-block"

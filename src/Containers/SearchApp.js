@@ -6,6 +6,7 @@ import SearchBar from "../Components/SearchBar";
 import ToolBar from "../Components/ToolBar";
 import UserTable from "../Components/UserTable";
 import {getFilteredSortedUsers} from "../reducers/rootReducer";
+import {getSortDataToState} from "../actions/Actions";
 
 
 const {searchText, changeActive, addFilter, fetchUsers, resetData} = actions;
@@ -21,18 +22,21 @@ class SearchApp extends Component {
 
     componentWillMount() {
         this.props.getUsers()
+
     }
 
-    render() {
 
+
+    render() {
         const state = this.props;
+        let abc = getFilteredSortedUsers(state)
 
         return (
             <div className="app container-fluid">
 
                 <SearchBar filterValue={state.filterValue} onKeyUp={this.props.onKeyUp.bind(this)}/>
 
-                <ToolBar onSorted={this.props.onSorted.bind(this)} reset={this.props.reset.bind(this)}/>
+                <ToolBar onSorted={this.props.onSorted.bind(this)}  reset={this.props.reset.bind(this)}/>
 
                 <div className="row">
                     <div className="col-sm-5 col-md-3 col-lg-3">
@@ -59,13 +63,19 @@ const mapStateToProps = (state) => {
 }
 
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = (dispatch) => {
+debugger
+    return{
+
     getUsers: () => dispatch(fetchUsers()),
-    onSorted: (type) => dispatch(addFilter({type})),
+    onSorted: (type) =>{
+        dispatch(addFilter({type}));
+    },
     activeUserChanged: (id) => dispatch(changeActive(id)),
     onKeyUp: (value) => dispatch(searchText(value)),
-     reset: () => dispatch(resetData())
-})
+     reset: () => dispatch(resetData()),
+        // getSortData:(data)=>(dispatch(getSortDataToState(data)))
+}}
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchApp);

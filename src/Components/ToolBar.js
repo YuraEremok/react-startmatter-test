@@ -9,7 +9,7 @@ export default class ToolBar extends Component {
 
 
   onSortedByName(e) {
-    this.props.onSorted('name');
+    this.props.onSorted('name',this.props.getFilteredSortedUsers);
   }
 
   onSortedByAge(e) {

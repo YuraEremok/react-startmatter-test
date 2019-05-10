@@ -9,7 +9,6 @@ export default class UserTable extends Component {
     const userData = this.props.userData;
     let userRows = [];
     if(userData) {
-
         const userRow =  userData.map(user => {
        return <UserRow
             user={user}

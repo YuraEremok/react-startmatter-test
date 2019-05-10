@@ -10,5 +10,7 @@ export const toggleEditMode = () => ({type: types.EDIT_MODE})
 export const editUser = (value,id,key) => ({type: types.EDIT_USER,value,id,key})
 export const resetData = () => ({type: types.RESET_DATA})
 export const updateUser = (user) => ({type: types.UPDATE_USER,user})
+export const getSortDataToState = (data) => ({type: types.SORTED_DATA,data})
+
 
 
