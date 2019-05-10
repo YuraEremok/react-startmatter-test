@@ -10,7 +10,7 @@ export const INITIAL_STATE = {
     editMode: false,
     activeUserId: null,
     isDesc: false,
-    sortedData:[]
+    sortedData: []
 };
 
 
@@ -24,7 +24,7 @@ export default function searchlist(state = INITIAL_STATE, action) {
                 ...state,
                 sortType: action.filter.type,
                 isDesc: !state.isDesc,
-                 // activeUserId:state.sortedData[0]
+                // activeUserId:state.sortedData[0]
             }
 
         case types.SEARCH_TEXT:
@@ -67,7 +67,7 @@ export default function searchlist(state = INITIAL_STATE, action) {
             stateCopy.data = stateCopy.data.map(u => {
                 if (u.id === id) {
 
-                    return {...u, [key]: action.value };
+                    return {...u, [key]: action.value};
                 } else {
                     return u;
                 }
@@ -81,19 +81,11 @@ export default function searchlist(state = INITIAL_STATE, action) {
                 ...state,
                 filterValue: "",
                 sortType: '',
-                activeUserId:0
+                activeUserId: 0
 
             }
         }
 
-        case types.SORTED_DATA:{
-            debugger
-            return{
-                ...state,
-                sortedData:action.data
-            }
-
-        }
 
         default:
             return state;
@@ -105,7 +97,6 @@ export const getActiveUser = (state) => {
     if (activeUsers.length) return activeUsers[0];
     return null;
 }
-
 
 
 export const getFilteredSortedUsers = (state) => {
@@ -124,7 +115,6 @@ export const getFilteredSortedUsers = (state) => {
         return 0;
     };
     let sortedData = filteredData.sort(filterFunc)
-
 
 
     return sortedData;
