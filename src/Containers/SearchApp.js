@@ -39,10 +39,10 @@ class SearchApp extends Component {
                 <ToolBar onSorted={this.props.onSorted.bind(this)}  reset={this.props.reset.bind(this)}/>
 
                 <div className="row">
-                    <div className="col-sm-5 col-md-3 col-lg-3">
+                    <div className="col-sm-5 col-md-5 col-lg-4">
                         <UserDetail />
                     </div>
-                    <div className="col-sm-7 col-md-9 col-lg-9">
+                    <div className="col-sm-7 col-md-7 col-lg-8">
                         <UserTable
                             isFetching={state.isFetching}
                             userData={getFilteredSortedUsers(state)}
