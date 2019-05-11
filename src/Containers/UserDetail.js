@@ -14,33 +14,34 @@ let UserDetail = (props) => {
     ) : (
         <div className="thumbnail">
             <button onClick={props.onEditClick}>Edit</button>
-            {props.editMode?<button onClick={()=>props.save(userDetail)}>Save</button>:""}
+            {props.editMode ? <button onClick={() => props.save(userDetail)}>Save</button> : ""}
 
             <img alt="img" src={`images/${userDetail.image}.jpg`}/>
             <div className="thumbnail-caption">
                 <h3>{userDetail.name}</h3>
                 <table className="table ">
-                    <tbody className ="userDetail">
+                    <tbody className="userDetail">
                     <tr>
 
                         <td>Age:</td>
-                        <td>{props.editMode ? <input type="text" value={userDetail.age} onChange={
+                        <td>{props.editMode ? <input size="10" type="text" value={userDetail.age} onChange={
                             (e) => {
                                 props.onChangeEditUser(e.currentTarget.value, userDetail.id, "age")
                             }}/> : userDetail.age}</td>
                     </tr>
                     <tr>
                         <td>Registration date:</td>
-                        <td>{props.editMode ? <input type="text" value={userDetail.RegistrationDate} onChange={
-                            (e) => {
-                                props.onChangeEditUser(e.currentTarget.value, userDetail.id, "RegistrationDate")
-                            }}/> : userDetail.RegistrationDate}</td>
+                        <td>{props.editMode ?
+                            <input type="text" size="10" value={userDetail.RegistrationDate} onChange={
+                                (e) => {
+                                    props.onChangeEditUser(e.currentTarget.value, userDetail.id, "RegistrationDate")
+                                }}/> : userDetail.RegistrationDate}</td>
                     </tr>
                     <tr>
 
 
                         <td>Email:</td>
-                        <td>{props.editMode ? <input type="text" value={userDetail.email} onChange={
+                        <td>{props.editMode ? <input type="text" size="15" value={userDetail.email} onChange={
                             (e) => {
                                 props.onChangeEditUser(e.currentTarget.value, userDetail.id, "email")
                             }}/> : userDetail.email}</td>
@@ -49,12 +50,13 @@ let UserDetail = (props) => {
 
                     </tbody>
                 </table>
-               <p>
+                <p>
                     <b>Status:</b>
-                    <span className="tdStatus">{props.editMode ? <textarea type="text" rows="auto" cols="45" value={userDetail.status} onChange={
-                        (e) => {
-                            props.onChangeEditUser(e.currentTarget.value, userDetail.id, "status")
-                        }}/> : <p>{userDetail.status}</p>}</span>
+                    <span className="tdStatus">{props.editMode ?
+                        <textarea type="text" rows="4" cols="30" value={userDetail.status} onChange={
+                            (e) => {
+                                props.onChangeEditUser(e.currentTarget.value, userDetail.id, "status")
+                            }}/> : <p>{userDetail.status}</p>}</span>
                 </p>
             </div>
         </div>
